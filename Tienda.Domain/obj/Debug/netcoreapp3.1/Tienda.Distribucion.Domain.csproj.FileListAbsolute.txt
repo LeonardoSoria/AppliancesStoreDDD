@@ -1,0 +1,30 @@
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.deps.json
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.dll
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.pdb
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.SharedKernel.dll
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.SharedKernel.pdb
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.csprojAssemblyReference.cache
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.AssemblyInfoInputs.cache
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.AssemblyInfo.cs
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.csproj.CopyComplete
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.dll
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.pdb
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.runtimeconfig.json
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.runtimeconfig.dev.json
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.csproj.CoreCompileInputs.cache
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.genruntimeconfig.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.deps.json
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.runtimeconfig.json
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.runtimeconfig.dev.json
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.dll
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.pdb
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.SharedKernel.dll
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.SharedKernel.pdb
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.csprojAssemblyReference.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.AssemblyInfoInputs.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.AssemblyInfo.cs
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.csproj.CoreCompileInputs.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.csproj.CopyComplete
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.dll
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.pdb
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.genruntimeconfig.cache

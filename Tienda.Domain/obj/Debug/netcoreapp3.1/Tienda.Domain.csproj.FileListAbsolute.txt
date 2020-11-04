@@ -1,0 +1,9 @@
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Domain.deps.json
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Domain.dll
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Domain.csprojAssemblyReference.cache
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Domain.AssemblyInfoInputs.cache
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Domain.AssemblyInfo.cs
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\bin\Debug\netcoreapp3.1\Tienda.Domain.pdb
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Domain.csproj.CoreCompileInputs.cache
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Domain.dll
+D:\Temp\II-2020\tiw\Tienda\Tienda.Domain\obj\Debug\netcoreapp3.1\Tienda.Domain.pdb
