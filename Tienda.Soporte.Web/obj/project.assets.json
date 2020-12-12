@@ -27,13 +27,26 @@
           "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
-      "MediatR/8.1.0": {
+      "MediatR/9.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/MediatR.dll": {}
         },
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {}
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -477,19 +490,6 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.6": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.6",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
-        }
-      },
       "Microsoft.EntityFrameworkCore.SqlServer/3.1.9": {
         "type": "package",
         "dependencies": {
@@ -501,20 +501,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.6": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.6",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.1.6",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Tools/3.1.9": {
@@ -2259,37 +2245,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Tienda.Distribucion.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.8",
-          "Tienda.SharedKernel": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Tienda.Distribucion.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Tienda.Distribucion.Domain.dll": {}
-        }
-      },
-      "Tienda.Distribucion.Infraestructura/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Autofac": "6.0.0",
-          "Autofac.Extensions.DependencyInjection": "7.0.2",
-          "Microsoft.EntityFrameworkCore": "3.1.8",
-          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
-          "Tienda.Distribucion.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Tienda.Distribucion.Infraestructura.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Tienda.Distribucion.Infraestructura.dll": {}
-        }
-      },
       "Tienda.SharedKernel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2302,6 +2257,20 @@
         },
         "runtime": {
           "bin/placeholder/Tienda.SharedKernel.dll": {}
+        }
+      },
+      "Tienda.Soporte.Applicacion/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Tienda.Soporte.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tienda.Soporte.Applicacion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tienda.Soporte.Applicacion.dll": {}
         }
       },
       "Tienda.Soporte.Domain/1.0.0": {
@@ -2327,7 +2296,7 @@
           "Autofac.Extensions.DependencyInjection": "7.0.2",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
-          "Tienda.Soporte.Domain": "1.0.0"
+          "Tienda.Soporte.Applicacion": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Tienda.Soporte.Infraestructura.dll": {}
@@ -2375,10 +2344,10 @@
         "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.xml"
       ]
     },
-    "MediatR/8.1.0": {
-      "sha512": "KJFnA0MV83bNOhvYbjIX1iDykhwFXoQu0KV7E1SVbNA/CmO2I7SAm2Baly0eS7VJ2GwlmStLajBfeiNgTpvYzQ==",
+    "MediatR/9.0.0": {
+      "sha512": "8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
       "type": "package",
-      "path": "mediatr/8.1.0",
+      "path": "mediatr/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2389,8 +2358,21 @@
         "lib/netstandard2.0/MediatR.xml",
         "lib/netstandard2.1/MediatR.dll",
         "lib/netstandard2.1/MediatR.xml",
-        "mediatr.8.1.0.nupkg.sha512",
+        "mediatr.9.0.0.nupkg.sha512",
         "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/9.0.0": {
+      "sha512": "msreY4ogiPdIRWiCQVHQDytIQpsZCLWsixWPZ+Xs86KZrvtuiV8BDHbIT0kBmogynVYWNpspb3caw+86YU8L6w==",
+      "type": "package",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll",
+        "mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+        "mediatr.extensions.microsoft.dependencyinjection.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -2915,21 +2897,6 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational.Design/1.1.6": {
-      "sha512": "kz7C0Ddnge16NRf4CU8GygYxOor3+oQ797//eXI+xbKlJr2ighAEkno9gOipDlym4SiFtKNNuOuBI/BDBGD7Kg==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.relational.design/1.1.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.dll",
-        "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.xml",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml",
-        "microsoft.entityframeworkcore.relational.design.1.1.6.nupkg.sha512",
-        "microsoft.entityframeworkcore.relational.design.nuspec"
-      ]
-    },
     "Microsoft.EntityFrameworkCore.SqlServer/3.1.9": {
       "sha512": "w0ybfzcNfSr5r7Ng/o3QN4EqOIxQCFVJ0p8BPlWlcqTXY2mTuq9E6P1UOj2tAfjlG0RgSfLjJG3j+aUApw3sTg==",
       "type": "package",
@@ -2942,21 +2909,6 @@
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.3.1.9.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.SqlServer.Design/1.1.6": {
-      "sha512": "nxdW1YfZtn3nbcFqIAbjo6vCbCNOx0g82qMv+9fTUsNTsW0KSENYc2pbjF3yO8ZqYdBjmx2gMfAGk6wjy5cldg==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver.design/1.1.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.Design.dll",
-        "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.Design.xml",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.xml",
-        "microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
-        "microsoft.entityframeworkcore.sqlserver.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Tools/3.1.9": {
@@ -7772,20 +7724,15 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Tienda.Distribucion.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Tienda.Domain/Tienda.Distribucion.Domain.csproj",
-      "msbuildProject": "../Tienda.Domain/Tienda.Distribucion.Domain.csproj"
-    },
-    "Tienda.Distribucion.Infraestructura/1.0.0": {
-      "type": "project",
-      "path": "../Tienda.Distribucion.Infraestructura/Tienda.Distribucion.Infraestructura.csproj",
-      "msbuildProject": "../Tienda.Distribucion.Infraestructura/Tienda.Distribucion.Infraestructura.csproj"
-    },
     "Tienda.SharedKernel/1.0.0": {
       "type": "project",
       "path": "../Tienda.SharedKernel/Tienda.SharedKernel.csproj",
       "msbuildProject": "../Tienda.SharedKernel/Tienda.SharedKernel.csproj"
+    },
+    "Tienda.Soporte.Applicacion/1.0.0": {
+      "type": "project",
+      "path": "../Tienda.Soporte.Applicacion/Tienda.Soporte.Applicacion.csproj",
+      "msbuildProject": "../Tienda.Soporte.Applicacion/Tienda.Soporte.Applicacion.csproj"
     },
     "Tienda.Soporte.Domain/1.0.0": {
       "type": "project",
@@ -7800,13 +7747,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "MediatR >= 9.0.0",
+      "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.9",
       "Microsoft.EntityFrameworkCore >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.9",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
-      "Tienda.Distribucion.Infraestructura >= 1.0.0",
       "Tienda.Soporte.Infraestructura >= 1.0.0"
     ]
   },
@@ -7840,9 +7788,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\NUR\\Taller de Ingenieria Web\\DomainDrivenDesign\\Tienda\\Tienda.Distribucion.Infraestructura\\Tienda.Distribucion.Infraestructura.csproj": {
-              "projectPath": "D:\\NUR\\Taller de Ingenieria Web\\DomainDrivenDesign\\Tienda\\Tienda.Distribucion.Infraestructura\\Tienda.Distribucion.Infraestructura.csproj"
-            },
             "D:\\NUR\\Taller de Ingenieria Web\\DomainDrivenDesign\\Tienda\\Tienda.Soporte.Infraestructura\\Tienda.Soporte.Infraestructura.csproj": {
               "projectPath": "D:\\NUR\\Taller de Ingenieria Web\\DomainDrivenDesign\\Tienda\\Tienda.Soporte.Infraestructura\\Tienda.Soporte.Infraestructura.csproj"
             }
@@ -7858,6 +7803,14 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "MediatR": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "MediatR.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[3.1.9, )"

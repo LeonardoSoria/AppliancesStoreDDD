@@ -13,7 +13,7 @@
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.Design": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
-          "Tienda.Soporte.Domain": "1.0.0"
+          "Tienda.Soporte.Applicacion": "1.0.0"
         },
         "runtime": {
           "Tienda.Soporte.Infraestructura.dll": {}
@@ -42,11 +42,23 @@
           }
         }
       },
-      "MediatR/8.1.0": {
+      "MediatR/9.0.0": {
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.1.0.0"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/9.0.0": {
+        "dependencies": {
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
           }
         }
       },
@@ -1088,11 +1100,20 @@
       },
       "Tienda.SharedKernel/1.0.0": {
         "dependencies": {
-          "MediatR": "8.1.0",
+          "MediatR": "9.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.9"
         },
         "runtime": {
           "Tienda.SharedKernel.dll": {}
+        }
+      },
+      "Tienda.Soporte.Applicacion/1.0.0": {
+        "dependencies": {
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Tienda.Soporte.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Tienda.Soporte.Applicacion.dll": {}
         }
       },
       "Tienda.Soporte.Domain/1.0.0": {
@@ -1127,12 +1148,19 @@
       "path": "autofac.extensions.dependencyinjection/7.0.2",
       "hashPath": "autofac.extensions.dependencyinjection.7.0.2.nupkg.sha512"
     },
-    "MediatR/8.1.0": {
+    "MediatR/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KJFnA0MV83bNOhvYbjIX1iDykhwFXoQu0KV7E1SVbNA/CmO2I7SAm2Baly0eS7VJ2GwlmStLajBfeiNgTpvYzQ==",
-      "path": "mediatr/8.1.0",
-      "hashPath": "mediatr.8.1.0.nupkg.sha512"
+      "sha512": "sha512-8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+      "path": "mediatr/9.0.0",
+      "hashPath": "mediatr.9.0.0.nupkg.sha512"
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-msreY4ogiPdIRWiCQVHQDytIQpsZCLWsixWPZ+Xs86KZrvtuiV8BDHbIT0kBmogynVYWNpspb3caw+86YU8L6w==",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/9.0.0",
+      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -1863,6 +1891,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Tienda.SharedKernel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tienda.Soporte.Applicacion/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

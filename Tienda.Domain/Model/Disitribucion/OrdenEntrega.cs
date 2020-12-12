@@ -29,8 +29,9 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
 
         private List<ViajeEntrega> _viajes;
 
-        public ImmutableList<ViajeEntrega> Viajes {
-            get 
+        public ImmutableList<ViajeEntrega> Viajes
+        {
+            get
             {
                 return _viajes.ToImmutableList<ViajeEntrega>();
             }
@@ -46,12 +47,12 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
             }
         }
 
-        public OrdenEntrega( 
-            string nombreCliente, 
-            string telefono, 
-            decimal latitudDestino, 
+        public OrdenEntrega(
+            string nombreCliente,
+            string telefono,
+            decimal latitudDestino,
             decimal longitudGps,
-            ICollection<ItemEntrega> items)
+            Dictionary<string, string> items)
         {
             Id = Guid.NewGuid();
             FechaRegistro = DateTime.Now;
@@ -64,9 +65,11 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
             _viajes = new List<ViajeEntrega>();
             _items = new List<ItemEntrega>();
 
-            foreach (var item in items)
+            foreach (var codigo in items.Keys)
             {
-                item.OrdenEntrega = this;
+                string descripcion = items[codigo];
+
+                ItemEntrega item = new ItemEntrega(codigo, descripcion, this);
                 _items.Add(item);
             }
         }
@@ -94,7 +97,7 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
             Estado = EstadoOrdenEntrega.Anulado;
         }
 
-        
+
 
     }
 }

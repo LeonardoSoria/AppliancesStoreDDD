@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Tienda.Soporte.Domain.Model.Soporte;
 using Tienda.Soporte.Domain.Persistence;
 using Tienda.Soporte.Domain.Persistence.Repository;
-using Tienda.Soporte.Web.ViewModel;
+using Tienda.Soporte.Infraestructura.DTO;
 
 namespace Tienda.Soporte.Web.Controllers
 {
@@ -25,7 +25,7 @@ namespace Tienda.Soporte.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertTechnician([FromBody] TechnicianViewModel technician)
+        public async Task<IActionResult> InsertTechnician([FromBody] TechnicianDTO technician)
         {
             try
             {

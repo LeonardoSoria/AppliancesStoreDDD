@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tienda.Distribucion.Applicacion.Persistence.Reporsitory;
 using Tienda.Distribucion.Domain.Model.Disitribucion;
-using Tienda.Distribucion.Domain.Persistence.Reporsitory;
 using Tienda.Distribucion.Infraestructura.Persistence;
 
 namespace Tienda.Distribucion.Infraestructura.Repository
@@ -19,9 +19,16 @@ namespace Tienda.Distribucion.Infraestructura.Repository
             _context = context;
         }
 
+        public async Task<List<OrdenEntrega>> GetAllOrdenEntrega()
+        {
+            List<OrdenEntrega> result =
+                await _context.OrdenEntregas.ToListAsync();
+            return result;
+        }
+
         public async Task<OrdenEntrega> GetOrdenEntregaById(Guid ordenEntregaId)
         {
-            OrdenEntrega obj = 
+            OrdenEntrega obj =
                 await _context.OrdenEntregas.Where(o => o.Id == ordenEntregaId).FirstOrDefaultAsync();
             return obj;
         }
@@ -34,7 +41,7 @@ namespace Tienda.Distribucion.Infraestructura.Repository
             {
                 await _context.ItemEntregas.AddAsync(item);
             }
-            
+
         }
     }
 }

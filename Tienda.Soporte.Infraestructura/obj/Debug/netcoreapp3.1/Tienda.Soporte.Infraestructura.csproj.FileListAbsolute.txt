@@ -15,3 +15,6 @@ D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraes
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Soporte.Infraestructura.dll
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Soporte.Infraestructura.pdb
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Soporte.Infraestructura.genruntimeconfig.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Soporte.Applicacion.exe
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Soporte.Applicacion.dll
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Soporte.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Soporte.Applicacion.pdb

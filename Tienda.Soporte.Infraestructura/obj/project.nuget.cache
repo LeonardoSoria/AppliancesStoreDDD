@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "x0ZUT1oDz6f1nEO7Y36rGFGIkZORLtl7g1BljuuUznN+8ezrQiH00HOtPInnrOsXAjk1mEkQNWQzphJNhdeT5g==",
+  "dgSpecHash": "F0Pp3vVplQnMPzhM7lYhF/2wu/gjCHRJyonhGBs+TVb644vRtLfB7pmjvDKdlIy1BeQdssXsgkJTaJzfYXHH6g==",
   "success": true,
   "projectFilePath": "D:\\NUR\\Taller de Ingenieria Web\\DomainDrivenDesign\\Tienda\\Tienda.Soporte.Infraestructura\\Tienda.Soporte.Infraestructura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leona\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\leona\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.0.2\\autofac.extensions.dependencyinjection.7.0.2.nupkg.sha512",
-    "C:\\Users\\leona\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\leona\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\leona\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\leona\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\leona\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\leona\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

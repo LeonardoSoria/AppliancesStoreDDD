@@ -16,8 +16,6 @@ D:\Temp\II-2020\tiw\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcore
 D:\Temp\II-2020\tiw\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.pdb
 D:\Temp\II-2020\tiw\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.csproj.CoreCompileInputs.cache
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.deps.json
-D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.runtimeconfig.json
-D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.runtimeconfig.dev.json
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.dll
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.pdb
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Domain.dll
@@ -27,8 +25,13 @@ D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.In
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.csprojAssemblyReference.cache
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.AssemblyInfoInputs.cache
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.AssemblyInfo.cs
-D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.csproj.CoreCompileInputs.cache
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.csproj.CopyComplete
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.dll
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.pdb
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Applicacion.exe
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Applicacion.dll
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Applicacion.pdb
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.runtimeconfig.json
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\bin\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.runtimeconfig.dev.json
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.genruntimeconfig.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.Distribucion.Infraestructura\obj\Debug\netcoreapp3.1\Tienda.Distribucion.Infraestructura.csproj.CoreCompileInputs.cache

@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
-using Tienda.Distribucion.Domain.Model.Disitribucion;
-using Tienda.Distribucion.Domain.Persistence;
-using Tienda.Distribucion.Domain.Persistence.Reporsitory;
-using Tienda.WebApp.ViewModel;
+using Tienda.Distribucion.Applicacion.DTO;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.GetAllOrdenEntrega;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.InsertOrdenEntrega;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.GetOrdenEntregaById;
+using MediatR;
 
 namespace Tienda.WebApp.Controllers
 {
@@ -16,53 +17,88 @@ namespace Tienda.WebApp.Controllers
     [ApiController]
     public class OrdenEntregaController : ControllerBase
     {
-        private readonly IOrdenEntregaRepository _ordenEntregaRepository;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
 
-        public OrdenEntregaController(IOrdenEntregaRepository ordenEntregaRepository,
-            IUnitOfWork unitOfWork)
+        public OrdenEntregaController(IMediator mediator)
         {
-            _ordenEntregaRepository = ordenEntregaRepository;
-            _unitOfWork = unitOfWork;
+            _mediator = mediator;
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertOrder([FromBody] OrdenEntregaViewModel ordenEntrega)
+        public async Task<IActionResult> InsertOrder([FromBody] InsertOrdenEntregaCommand ordenEntregaCommand)
         {
             try
             {
-                List<ItemEntrega> items = new List<ItemEntrega>();
-                foreach (var item in ordenEntrega.Items)
+                await _mediator.Send(ordenEntregaCommand);
+
+                return Ok(new
                 {
-                    items.Add(new ItemEntrega(item.Codigo, item.Descripcion));
-                }
-
-                OrdenEntrega obj = new OrdenEntrega(ordenEntrega.NombreCliente,
-                    ordenEntrega.Telefono,
-                    ordenEntrega.LatitudDestino,
-                    ordenEntrega.LongitudDestino,
-                    items
-                    );
-
-                await _ordenEntregaRepository.Insert(obj);
-
-                await _unitOfWork.Commit();
-
-                return Ok();
+                    Ok = true,
+                    Message = "Registro insertado exitosamente"
+                });
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                Console.WriteLine(ex);
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
             }
-            return BadRequest();
         }
 
-        [HttpGet]        
+        [HttpGet]
+        public async Task<IActionResult> GetOrders()
+        {
+            try
+            {
+                List<OrdenEntregaDTO> list = await _mediator.Send(new GetAllOrdenEntregaQuery());
+
+                return Ok(new
+                {
+                    orders = list
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpGet]
+        [Route("{guid:Guid}")]
+        public async Task<IActionResult> GetOrders(Guid guid)
+        {
+            try
+            {
+                OrdenEntregaDTO obj = await _mediator.Send(new GetOrdenEntregaByIdQuery(guid));
+
+                return Ok(new
+                {
+                    order = obj
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpGet]
         [Route("hello")]
         public string hello()
         {
             return "Hello";
         }
+
 
     }
 }

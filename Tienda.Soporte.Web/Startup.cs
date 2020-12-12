@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Tienda.Soporte.Domain.Persistence;
 using Tienda.Soporte.Domain.Persistence.Repository;
+using Tienda.Soporte.Infraestructura;
 using Tienda.Soporte.Infraestructura.Persistence;
 using Tienda.Soporte.Infraestructura.Persistence.Repository;
 
@@ -35,11 +37,13 @@ namespace Tienda.Soporte.Web
                    Configuration.GetConnectionString("DBConnectionString"),
                    b => b.MigrationsAssembly("Tienda.Soporte.Web")));
 
+            services.AddMediatR(typeof(ApplicationStartup).Assembly);
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IServiceOrderRepository, ServiceOrderRepository>();
-            services.AddScoped<IServiceOrderDetailRepository, ServiceOrderDetailRepository>();
+            // services.AddScoped<IServiceOrderDetailRepository, ServiceOrderDetailRepository>();
             services.AddScoped<ITechnicianRepository, TechnicianRepository>();
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<IJobFormRepository, JobFormRepository>();

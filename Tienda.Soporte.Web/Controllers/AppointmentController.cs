@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Tienda.Soporte.Domain.Model.Soporte;
 using Tienda.Soporte.Domain.Persistence;
 using Tienda.Soporte.Domain.Persistence.Repository;
-using Tienda.Soporte.Web.ViewModel;
+using Tienda.Soporte.Infraestructura.DTO;
 
 namespace Tienda.Soporte.Web.Controllers
 {
@@ -25,14 +25,14 @@ namespace Tienda.Soporte.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertAppointment([FromBody] AppointmentViewModel appointment)
+        public async Task<IActionResult> InsertAppointment([FromBody] AppointmentDTO appointment)
         {
             try
             {
                 Appointment objAppointment= new Appointment(appointment.VisitDate, new ServiceOrder(appointment.ServiceOrder.Id));
                 Appointment appo = await _appointmentRepository.Insert(objAppointment);
                 await _unitOfWork.Commit();
-                foreach (TechnicianViewModel technician in appointment.Technicians)
+                foreach (TechnicianDTO technician in appointment.Technicians)
                 {
                     await _appointmentRepository.InsertTechniciansInAppointment(appo, new Technician(technician.TechnicianId));
                     await _unitOfWork.Commit();
@@ -54,7 +54,7 @@ namespace Tienda.Soporte.Web.Controllers
 
         [HttpPost]
         [Route("cancelAppointment")]
-        public async Task<IActionResult> CancelServiceOrder([FromBody] CancellationViewModel cancellation)
+        public async Task<IActionResult> CancelServiceOrder([FromBody] CancellationDTO cancellation)
         {
             try
             {

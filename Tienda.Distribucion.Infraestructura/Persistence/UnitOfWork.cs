@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Tienda.Distribucion.Domain.Persistence;
+using Tienda.Distribucion.Applicacion.Persistence;
 
 namespace Tienda.Distribucion.Infraestructura.Persistence
 {
@@ -13,6 +14,6 @@ namespace Tienda.Distribucion.Infraestructura.Persistence
         public UnitOfWork(ApplicationDbContext dbContext)
             => _dbContext = dbContext;
 
-        public Task Commit() => _dbContext.SaveChangesAsync();
+        public Task Commit(CancellationToken cancellationToken) => _dbContext.SaveChangesAsync(cancellationToken);
     }
 }

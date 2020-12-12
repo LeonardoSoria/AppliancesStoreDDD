@@ -21,3 +21,4 @@ D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.SharedKernel\ob
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.SharedKernel\obj\Debug\netcoreapp3.1\Tienda.SharedKernel.dll
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.SharedKernel\obj\Debug\netcoreapp3.1\Tienda.SharedKernel.pdb
 D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.SharedKernel\obj\Debug\netcoreapp3.1\Tienda.SharedKernel.genruntimeconfig.cache
+D:\NUR\Taller de Ingenieria Web\DomainDrivenDesign\Tienda\Tienda.SharedKernel\obj\Debug\netcoreapp3.1\Tienda.SharedKernel.csprojAssemblyReference.cache

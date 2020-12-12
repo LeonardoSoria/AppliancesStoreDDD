@@ -11,8 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Tienda.Distribucion.Domain.Persistence;
-using Tienda.Distribucion.Domain.Persistence.Reporsitory;
+using Tienda.Distribucion.Applicacion;
 using Tienda.Distribucion.Infraestructura;
 using Tienda.Distribucion.Infraestructura.Persistence;
 using Tienda.Distribucion.Infraestructura.Repository;
@@ -31,27 +30,34 @@ namespace Tienda.WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddDbContext<ApplicationDbContext>(options =>
-                   options.UseSqlServer(
-                   Configuration.GetConnectionString("DBConnectionString"),
-                   b => b.MigrationsAssembly("Tienda.WebApp")));
-
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IOrdenEntregaRepository, OrdenEntregaRepository>();
+            services.AddApplication();
+            services.AddInfrastructure(Configuration);
 
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+            ApplicationDbContext dbContext)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                if (dbContext.Database.IsSqlServer())
+                {
+                    dbContext.Database.Migrate();
+                }
+
+                //app.UseExceptionHandler("/Home/Main");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
