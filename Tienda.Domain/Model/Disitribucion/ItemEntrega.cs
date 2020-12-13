@@ -9,9 +9,7 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
     public class ItemEntrega : Entity
     {
         public Guid Id { get; private set; }
-
         public OrdenEntrega OrdenEntrega { get; set; }
-
         public string Codigo { get; private set; }
         public string Descripcion { get; private set; }
 

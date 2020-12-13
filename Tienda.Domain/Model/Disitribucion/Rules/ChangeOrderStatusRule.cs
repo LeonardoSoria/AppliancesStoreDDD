@@ -22,19 +22,19 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion.Rules
         public bool IsBroken()
         {
             if(newStatus == EstadoOrdenEntrega.ListoParaEntrega && oldStatus != EstadoOrdenEntrega.Pendiente)
-                return false;
+                return true;
 
             if (newStatus == EstadoOrdenEntrega.Anulado &&
                 (oldStatus != EstadoOrdenEntrega.Pendiente || oldStatus != EstadoOrdenEntrega.ListoParaEntrega))
-                return false;
+                return true;
 
             if (newStatus == EstadoOrdenEntrega.Pendiente && oldStatus != EstadoOrdenEntrega.ListoParaEntrega)
-                return false;
+                return true;
 
             if (newStatus == EstadoOrdenEntrega.Finaliado && oldStatus != EstadoOrdenEntrega.ListoParaEntrega)
-                return false;
+                return true;
 
-            return true;
+            return false;
         }
     }
 }

@@ -12,6 +12,20 @@ namespace Tienda.Distribucion.Applicacion.Persistence.Reporsitory
 
         Task<OrdenEntrega> GetOrdenEntregaById(Guid ordenEntregaId);
 
+        Task ConsolidarEntrega(Guid ordenEntregaId, ViajeEntrega viajeEntrega);
+
+        Task FinalizarEntrega(Guid ordenEntregaId);
+
+        Task AnularEntrega(Guid ordenEntregaId);
+
+        Task IniciarViajeEntrega(Guid viajeEntregaId);
+
+        Task FinalizarViajeEntrega(Guid viajeEntregaId);
+
         Task<List<OrdenEntrega>> GetAllOrdenEntrega();
+
+        Task<List<ItemEntrega>> GetItemEntregaByOrdenEntregaId(Guid ordenEntregaId);
+
+        Task<List<ViajeEntrega>> GetViajeEntregaByOrdenEntregaId(Guid ordenEntregaId);
     }
 }

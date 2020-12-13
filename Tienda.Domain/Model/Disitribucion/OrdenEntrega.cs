@@ -19,11 +19,9 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
         public DateTime? FechaConsolidacion { get; private set; }
         public DateTime? FechaAnulacion { get; private set; }
         public DateTime? FechaFinalizacion { get; private set; }
-
         public EstadoOrdenEntrega Estado { get; private set; }
         public PersonNameValue NombreCliente { get; private set; }
         public PhoneNumberValue Telefono { get; private set; }
-
         public LatitudGps LatitudDestino { get; private set; }
         public LongitudGps LongitudDestino { get; private set; }
 
@@ -47,12 +45,13 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
             }
         }
 
-        public OrdenEntrega(
-            string nombreCliente,
-            string telefono,
-            decimal latitudDestino,
-            decimal longitudGps,
-            Dictionary<string, string> items)
+        public OrdenEntrega(Guid ordenEntregaId)
+        {
+            Id = ordenEntregaId;
+        }
+
+        public OrdenEntrega(string nombreCliente, string telefono, decimal latitudDestino, decimal longitudGps,
+                            Dictionary<string, string> items)
         {
             Id = Guid.NewGuid();
             FechaRegistro = DateTime.Now;

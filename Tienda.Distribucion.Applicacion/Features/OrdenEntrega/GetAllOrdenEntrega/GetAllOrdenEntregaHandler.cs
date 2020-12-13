@@ -33,7 +33,8 @@ namespace Tienda.Distribucion.Applicacion.Features.OrdenEntrega.GetAllOrdenEntre
                     LatitudDestino = item.LatitudDestino,
                     LongitudDestino = item.LongitudDestino,
                     NombreCliente = item.NombreCliente,
-                    Telefono = item.Telefono
+                    Telefono = item.Telefono,
+                    Estado = item.Estado
                 });
             }
 

@@ -10,11 +10,8 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
     public class ViajeEntrega : Entity
     {
         public Guid ViajeId { get; private set; }
-
         public OrdenEntrega OrdenEntrega { get; private set; }
-
         public DateTime FechaProgramado { get; private set; }
-
         public DateTime? FechaInicioViaje { get; private set; }
         public DateTime? FechaFinViaje { get; private set; }
 
@@ -46,6 +43,16 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
         {
             SeguimientoViajeItem item = new SeguimientoViajeItem(latitud, longitud);
             _itemsSeguimiento.Add(item);
+        }
+
+        public void IniciarViajeEntrega()
+        {
+            FechaInicioViaje = DateTime.Now;
+        }
+
+        public void FinalizarViajeEntrega()
+        {
+            FechaFinViaje = DateTime.Now;
         }
 
 

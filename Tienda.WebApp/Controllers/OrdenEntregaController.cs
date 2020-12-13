@@ -10,6 +10,11 @@ using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.GetAllOrdenEntrega;
 using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.InsertOrdenEntrega;
 using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.GetOrdenEntregaById;
 using MediatR;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.ConsolidadOrdenEntrega;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.FinalizarOrdenEntrega;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.CancelarOrdenEntrega;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.IniciarViaje;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.FinalizarViajeEntrega;
 
 namespace Tienda.WebApp.Controllers
 {
@@ -92,11 +97,124 @@ namespace Tienda.WebApp.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("hello")]
-        public string hello()
+        [HttpPost]
+        [Route("consolidarOrdenEntrega")]
+        public async Task<IActionResult> ConsolidarOrdenEntrega([FromBody] ViajeEntregaDTO viajeEntrega)
         {
-            return "Hello";
+            try
+            {
+                await _mediator.Send(new ConsolidarOrdenEntregaCommand(viajeEntrega));
+
+                return Ok(new
+                {
+                    Ok = true,
+                    Message = "La orden de entrega se ha consolidado exitosamente"
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        [Route("finalizarOrdenEntrega")]
+        public async Task<IActionResult> FinalizarOrdenEntrega([FromBody] CambiarEstadoOrdenEntregaDTO cambiarEstado)
+        {
+            try
+            {
+                await _mediator.Send(new FinalizarOrdenEntregaCommand(cambiarEstado));
+
+                return Ok(new
+                {
+                    Ok = true,
+                    Message = "La orden de entrega se ha finalizado exitosamente"
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        [Route("anularOrdenEntrega")]
+        public async Task<IActionResult> AnularOrdenEntrega([FromBody] CambiarEstadoOrdenEntregaDTO cambiarEstado)
+        {
+            try
+            {
+                await _mediator.Send(new AnularOrdenEntregaCommand(cambiarEstado));
+
+                return Ok(new
+                {
+                    Ok = true,
+                    Message = "La orden de entrega se ha anulado exitosamente"
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        [Route("iniciarViaje")]
+        public async Task<IActionResult> IniciarViaje([FromBody] CambiarFechaViajeEntregaDTO cambiarFecha)
+        {
+            try
+            {
+                await _mediator.Send(new IniciarViajeEntregaCommand(cambiarFecha));
+
+                return Ok(new
+                {
+                    Ok = true,
+                    Message = "El viaje se ha iniciado exitosamente"
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        [Route("finalizarViaje")]
+        public async Task<IActionResult> FinalizarViaje([FromBody] CambiarFechaViajeEntregaDTO cambiarFecha)
+        {
+            try
+            {
+                await _mediator.Send(new FinalizarViajeEntregaCommand(cambiarFecha));
+
+                return Ok(new
+                {
+                    Ok = true,
+                    Message = "El viaje se ha finalizado exitosamente"
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
         }
 
 

@@ -33,6 +33,29 @@ namespace Tienda.Distribucion.Infraestructura.Repository
             return obj;
         }
 
+        public async Task ConsolidarEntrega(Guid ordenEntregaId, ViajeEntrega viajeEntrega)
+        {
+            OrdenEntrega obj =
+                await _context.OrdenEntregas.Where(o => o.Id == ordenEntregaId).FirstOrDefaultAsync();
+            ViajeEntrega objViaje = new ViajeEntrega(obj, viajeEntrega.FechaProgramado);
+            await _context.ViajesEntrega.AddAsync(objViaje);
+            obj.ConsolidarOrdenEntrega();
+        }
+
+        public async Task FinalizarEntrega(Guid ordenEntregaId)
+        {
+            OrdenEntrega obj =
+                await _context.OrdenEntregas.Where(o => o.Id == ordenEntregaId).FirstOrDefaultAsync();
+            obj.FinalizarEntrega();
+        }
+
+        public async Task AnularEntrega(Guid ordenEntregaId)
+        {
+            OrdenEntrega obj =
+                await _context.OrdenEntregas.Where(o => o.Id == ordenEntregaId).FirstOrDefaultAsync();
+            obj.AnularEntrega();
+        }
+
         public async Task Insert(OrdenEntrega ordenEntrega)
         {
             await _context.OrdenEntregas.AddAsync(ordenEntrega);
@@ -41,7 +64,34 @@ namespace Tienda.Distribucion.Infraestructura.Repository
             {
                 await _context.ItemEntregas.AddAsync(item);
             }
+        }
 
+        public async Task<List<ViajeEntrega>> GetViajeEntregaByOrdenEntregaId(Guid ordenEntregaId)
+        {
+            List<ViajeEntrega> result =
+                await _context.ViajesEntrega.Where(x => x.OrdenEntrega.Id == ordenEntregaId).ToListAsync();
+            return result;
+        }
+
+        public async Task<List<ItemEntrega>> GetItemEntregaByOrdenEntregaId(Guid ordenEntregaId)
+        {
+            List<ItemEntrega> result =
+                await _context.ItemEntregas.Where(x => x.OrdenEntrega.Id == ordenEntregaId).ToListAsync();
+            return result;
+        }
+
+        public async Task IniciarViajeEntrega(Guid viajeEntregaId)
+        {
+            ViajeEntrega obj =
+                await _context.ViajesEntrega.Where(o => o.ViajeId == viajeEntregaId).FirstOrDefaultAsync();
+            obj.IniciarViajeEntrega();
+        }
+
+        public async Task FinalizarViajeEntrega(Guid viajeEntregaId)
+        {
+            ViajeEntrega obj =
+                await _context.ViajesEntrega.Where(o => o.ViajeId == viajeEntregaId).FirstOrDefaultAsync();
+            obj.FinalizarViajeEntrega();
         }
     }
 }
