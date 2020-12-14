@@ -15,6 +15,7 @@ using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.FinalizarOrdenEntreg
 using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.CancelarOrdenEntrega;
 using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.IniciarViaje;
 using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.FinalizarViajeEntrega;
+using Tienda.Distribucion.Applicacion.Features.OrdenEntrega.InsertarSeguimientoViajeItem;
 
 namespace Tienda.WebApp.Controllers
 {
@@ -205,6 +206,30 @@ namespace Tienda.WebApp.Controllers
                 {
                     Ok = true,
                     Message = "El viaje se ha finalizado exitosamente"
+                });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new
+                {
+                    Ok = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        [Route("insertarSeguimiento")]
+        public async Task<IActionResult> InsertarSeguimiento([FromBody] SeguimientoViajeItemDTO seguimiento)
+        {
+            try
+            {
+                await _mediator.Send(new InsertarSeguimientoVIajeItemCommand(seguimiento));
+
+                return Ok(new
+                {
+                    Ok = true,
+                    Message = "El seguimiento se ha registrado exitosamente"
                 });
             }
             catch (Exception e)

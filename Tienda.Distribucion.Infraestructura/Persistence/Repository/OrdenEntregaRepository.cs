@@ -93,5 +93,16 @@ namespace Tienda.Distribucion.Infraestructura.Repository
                 await _context.ViajesEntrega.Where(o => o.ViajeId == viajeEntregaId).FirstOrDefaultAsync();
             obj.FinalizarViajeEntrega();
         }
+
+        public async Task InsertarSeguimientoViajeItem(Guid viajeEntregaId, SeguimientoViajeItem seguimientoViajeItem)
+        {
+            ViajeEntrega obj =
+                await _context.ViajesEntrega.Where(o => o.ViajeId == viajeEntregaId).FirstOrDefaultAsync();
+            
+            SeguimientoViajeItem objSeguimientoViajeItem = new SeguimientoViajeItem(
+                seguimientoViajeItem.Latitud, seguimientoViajeItem.Longitud, obj);
+
+            await _context.SeguimientoViajeItem.AddAsync(objSeguimientoViajeItem);
+        }
     }
 }

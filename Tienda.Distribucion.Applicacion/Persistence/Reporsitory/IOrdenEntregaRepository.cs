@@ -14,6 +14,8 @@ namespace Tienda.Distribucion.Applicacion.Persistence.Reporsitory
 
         Task ConsolidarEntrega(Guid ordenEntregaId, ViajeEntrega viajeEntrega);
 
+        Task InsertarSeguimientoViajeItem(Guid viajeEntregaId, SeguimientoViajeItem seguimientoViajeItem);
+
         Task FinalizarEntrega(Guid ordenEntregaId);
 
         Task AnularEntrega(Guid ordenEntregaId);

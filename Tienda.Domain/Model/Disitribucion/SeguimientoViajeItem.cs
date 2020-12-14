@@ -22,6 +22,14 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion
             Latitud = latitud;
             Longitud = longitud;
         }
+        public SeguimientoViajeItem(decimal latitud, decimal longitud, ViajeEntrega viaje)
+        {
+            Id = Guid.NewGuid();
+            FechaHora = DateTime.Now;
+            Latitud = latitud;
+            Longitud = longitud;
+            Viaje = viaje;
+        }
 
         protected SeguimientoViajeItem() { }
     }
