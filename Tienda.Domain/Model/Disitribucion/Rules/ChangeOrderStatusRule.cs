@@ -24,8 +24,7 @@ namespace Tienda.Distribucion.Domain.Model.Disitribucion.Rules
             if(newStatus == EstadoOrdenEntrega.ListoParaEntrega && oldStatus != EstadoOrdenEntrega.Pendiente)
                 return true;
 
-            if (newStatus == EstadoOrdenEntrega.Anulado &&
-                (oldStatus != EstadoOrdenEntrega.Pendiente || oldStatus != EstadoOrdenEntrega.ListoParaEntrega))
+            if (newStatus == EstadoOrdenEntrega.Anulado && oldStatus == EstadoOrdenEntrega.Finaliado)
                 return true;
 
             if (newStatus == EstadoOrdenEntrega.Pendiente && oldStatus != EstadoOrdenEntrega.ListoParaEntrega)
